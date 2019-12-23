@@ -22,8 +22,8 @@ public class ConnectionProvider {
 	private static DataSource getDSInstance() {
 		if (dataSource == null){
 			try {
-				Context context = new InitialContext();
-				Context envContext = (Context) context.lookup("java:comp/env");
+				Context initContext = new InitialContext();
+				Context envContext = (Context) initContext.lookup("java:comp/env");
 				dataSource = (DataSource) envContext.lookup("jdbc/library");
 			} catch (NamingException e) {
 				e.printStackTrace();

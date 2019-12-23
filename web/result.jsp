@@ -9,23 +9,23 @@
          language="java"
          pageEncoding="UTF-8"
 %>
-<% Book book = (Book)request.getAttribute("book");%>
+<% Book book = (Book)request.getAttribute("book"); %>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" charset="UTF-8" content="text/html">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Wynik operacji</title>
 </head>
 <body>
 <h1>
-    Wynik zapytania: <%=request.getAttribute("option")%>
+    Wynik zapytania: <%=request.getAttribute("option") %>
 </h1>
 <p>W wyniku Twojego zapytania otrzymano następujący wynik:</p>
 <p>
-    Tytuł: <% book.getTitle();%><br>
-    ISBN: <% book.getIsbn();%><br>
-    Opis: <% book.getDescription();%>
+    Tytuł: <%= book.getTitle() %> <br>
+    ISBN: <%= book.getIsbn() %> <br>
+    Opis: <%= book.getDescription() %>
 </p>
 
 </body>

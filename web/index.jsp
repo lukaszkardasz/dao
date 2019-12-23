@@ -25,7 +25,7 @@
     <input type="text" placeholder="opis" name="description"><br>
       Szukaj: <input type="radio" name="option" value="search"><br>
       Dodaj: <input type="radio" name="option" value="add"><br>
-      Modyfikuj: <input type="radio" name="option" value="update">
+      Modyfikuj: <input type="radio" name="option" value="update"><br>
       Usuń: <input type="radio" name="option" value="delete"><br>
     <input type="submit" value="Wyślij">
   </form>

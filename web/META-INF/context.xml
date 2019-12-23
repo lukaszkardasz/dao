@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Context>
-    <Resource name="jdbc/users"
+    <Resource name="jdbc/library"
               auth="Container"
               type="javax.sql.DataSource"
               initialSize="10"
@@ -9,6 +9,6 @@
               maxWaitMillis="10000"
               username="user"
               password="password"
-              driverClassName="com.mysql.jdbc.Driver"
+              driverClassName="com.mysql.cj.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/library?serverTimezone=UTC"/>
 </Context>
