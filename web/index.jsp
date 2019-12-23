@@ -13,16 +13,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <title>Tajna baza CIA</title>
+    <title>Biblioteka viewer</title>
 </head>
 <body>
 <h1>
-    Zaloguj się
+    Library viewer
 </h1>
-  <form action="login" method="post">
-    <input type="text" placeholder="username" name="username"><br>
-    <input type="password" placeholder="password" name="password"><br>
-    <input type="submit" value="Zaloguj">
+  <form action="BookServlet" method="post">
+    <input type="text" placeholder="isbn" name="isbn"><br>
+    <input type="text" placeholder="tytuł" name="title"><br>
+    <input type="text" placeholder="opis" name="description"><br>
+      Szukaj: <input type="radio" name="option" value="search"><br>
+      Dodaj: <input type="radio" name="option" value="add"><br>
+      Modyfikuj: <input type="radio" name="option" value="update">
+      Usuń: <input type="radio" name="option" value="delete"><br>
+    <input type="submit" value="Wyślij">
   </form>
 </body>
 </html>
