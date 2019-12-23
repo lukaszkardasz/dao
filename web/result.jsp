@@ -1,4 +1,4 @@
-<%--
+<%@ page import="pl.n2god.dao.model.Book" %><%--
   Created by IntelliJ IDEA.
   User: n2god
   Date: 23/12/2019
@@ -9,18 +9,24 @@
          language="java"
          pageEncoding="UTF-8"
 %>
+<% Book book = (Book)request.getAttribute("book");%>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" charset="UTF-8" content="text/html">
-    <title>Witaj</title>
+    <title>Wynik operacji</title>
 </head>
 <body>
 <h1>
-    Witaj <%= session.getAttribute("username")%>
+    Wynik zapytania: <%=request.getAttribute("option")%>
 </h1>
-<h2>
-    Twoje uprawnienia: <%=session.getAttribute("privigiles")%>
-</h2>
+<p>W wyniku Twojego zapytania otrzymano następujący wynik:</p>
+<p>
+    Tytuł: <% book.getTitle();%><br>
+    ISBN: <% book.getIsbn();%><br>
+    Opis: <% book.getDescription()%>
+</p>
+
 </body>
 </html>
