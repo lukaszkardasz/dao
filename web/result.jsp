@@ -25,7 +25,7 @@
 <p>
     Tytuł: <% book.getTitle();%><br>
     ISBN: <% book.getIsbn();%><br>
-    Opis: <% book.getDescription()%>
+    Opis: <% book.getDescription();%>
 </p>
 
 </body>
